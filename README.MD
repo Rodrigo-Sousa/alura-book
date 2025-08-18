@@ -11,3 +11,5 @@ Criamos uma diretório com o nome: **alura-book-projeto**, via terminal, acessam
 2. Rodando a aplicação
 
 Abrir o terminal na pasta do nosso projeto (alura-books-projeto) e rodar o comando `npm start`, para iniciar o nosso projeto. Assim que for rodado, no terminal teremos a mensagem de que foi compilado com sucesso e aberto no nosso navegador a URL: http://localhost:3000 (é importante não ter nenhuma aplicação rodando nessa porta, porque caso tenha, será preciso alterar esse caminho nas configurações do react.)
+
+3. Após clonar o projeto, entrar na pasta **alura-book-projeto** e rodar o comando `npm install`, para que seja instalado as dependências usadas neste projeto. Após instalação concluída, rodar o comando `npm start`, para iniciar o projeto.
