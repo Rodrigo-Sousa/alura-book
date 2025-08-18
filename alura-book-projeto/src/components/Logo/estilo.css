@@ -1,0 +1,4 @@
+.logo {
+  /* Disponibilizando o texto na horizontal */
+  display: flex;
+}
