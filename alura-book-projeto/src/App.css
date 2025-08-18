@@ -1,0 +1,13 @@
+.App {
+    /* Largura e altura em 100 */
+    width: 100vw;
+    height: 100vh;
+    /* Cor de fundo */
+    background-image: linear-gradient(90deg, #002F52 35%, #326589);
+}
+
+/* Estilizando o header que será exibido na página */
+.App-header {
+    background-color: #FFF;
+    display: flex;
+}

@@ -1,4 +1,11 @@
 .logo {
   /* Disponibilizando o texto na horizontal */
   display: flex;
+  /* Aumentando a fonte */
+  font-size: 30px;
+}
+
+/* Classe para controlar a imagem do logo */
+.logo-img {
+    margin: 10px;
 }
