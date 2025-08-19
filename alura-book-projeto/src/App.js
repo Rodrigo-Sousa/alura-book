@@ -1,6 +1,11 @@
 // Importação do arquivo CSS
 import './App.css';
 import Logo from "./components/Logo"
+import perfil from './imagens/perfil.svg'
+import sacola from './imagens/sacola.svg'
+
+const textoOpcoes = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE'];
+const icones = [perfil, sacola]
 
 function App() {
   return (
@@ -10,12 +15,18 @@ function App() {
         {/* Importando o componente Logo */}
         <Logo></Logo>
         {/* Adicionando as opções do menu */}
-        <ul>
-          <li><p>CATEGORIAS</p></li>
-          <li><p>MINHA ESTANTE</p></li>
-          <li><p>FAVORITOS</p></li>
+        <ul className='opcoes'>
+          {/* Varrendo o array e retornando um novo array no lugar, otimizando o código */}
+          {textoOpcoes.map((texto) => (
+            <li className='opcao'><p>{texto}</p></li>
+          ))}
         </ul>
-
+          {/* Exibindo as mensagnes dos ícones que foram importados */}
+        <ul className='icones'>
+          {icones.map((icone) => (
+            <li className='icone'><img src={icone}></img></li>
+          ))}
+        </ul>
       </header>
     </div>
   );
