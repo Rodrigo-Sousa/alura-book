@@ -1,8 +1,8 @@
 // Importação do arquivo CSS
 import './App.css';
 import Logo from "./components/Logo"
-import perfil from './imagens/perfil.svg'
-import sacola from './imagens/sacola.svg'
+import perfil from './images/perfil.svg'
+import sacola from './images/sacola.svg'
 
 const textoOpcoes = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE'];
 const icones = [perfil, sacola]
