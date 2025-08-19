@@ -15,3 +15,5 @@ Abrir o terminal na pasta do nosso projeto (alura-books-projeto) e rodar o coman
 3. Após clonar o projeto, entrar na pasta **alura-book-projeto** e rodar o comando `npm install`, para que seja instalado as dependências usadas neste projeto. Após instalação concluída, rodar o comando `npm start`, para iniciar o projeto.
 
 4. Criando uma pasta com o nome **_components_**, dentro da pasta _src_. Servindo para termos um código mais organizado e podendo "reaproveitar" partes dos nossos códigos em diversos outros momentos.
+
+5. Estilizado o conteúdo dos itens do menu (_header_). 
