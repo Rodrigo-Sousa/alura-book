@@ -3,7 +3,7 @@ import './App.css';
 import Logo from "./components/Logo"
 import perfil from './images/perfil.svg'
 import sacola from './images/sacola.svg'
-
+// Lista de texto (array)
 const textoOpcoes = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE'];
 const icones = [perfil, sacola]
 
