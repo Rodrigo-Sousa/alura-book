@@ -1,0 +1,6 @@
+/* Estilizando o header que será exibido na página */
+.App-header {
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+}

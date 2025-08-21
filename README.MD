@@ -17,3 +17,5 @@ Abrir o terminal na pasta do nosso projeto (alura-books-projeto) e rodar o coman
 4. Criando uma pasta com o nome **_components_**, dentro da pasta _src_. Servindo para termos um código mais organizado e podendo "reaproveitar" partes dos nossos códigos em diversos outros momentos.
 
 5. Estilizado o conteúdo dos itens do menu (_header_). 
+
+6. Simplificando o código, deixando ele menos verboso. Sendo criado novos componentes e melhorando o _layout_.
