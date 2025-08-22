@@ -22,12 +22,12 @@ const textoOpcoes = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE'];
 function OpcoesHeader(){
     return (
         //Adicionando as opções do menu
-        <Opcoe>
+        <Opcoes>
           {/* Varrendo o array e retornando um novo array no lugar, otimizando o código */}
           {textoOpcoes.map((texto) => (
-            <Opcoes><p>{texto}</p></Opcoes>
+            <Opcoe><p>{texto}</p></Opcoe>
           ))}
-        </Opcoe>
+        </Opcoes>
     )
 }
 
