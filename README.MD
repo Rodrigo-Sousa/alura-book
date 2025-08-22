@@ -21,3 +21,5 @@ Abrir o terminal na pasta do nosso projeto (alura-books-projeto) e rodar o coman
 6. Simplificando o código, deixando ele menos verboso. Sendo criado novos componentes e melhorando o _layout_.
 
 7. Instalando o _styled-components_ para utilização em nosso projeto.
+
+8. Criando os containers que encapsulam alguns conteúdo dentro, utilizando o _styled-components_.
