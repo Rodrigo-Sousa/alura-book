@@ -22,4 +22,4 @@ Abrir o terminal na pasta do nosso projeto (alura-books-projeto) e rodar o coman
 
 7. Instalando o _styled-components_ para utilização em nosso projeto.
 
-8. Criando os containers que encapsulam alguns conteúdo dentro, utilizando o _styled-components_.
+8. Criando os containers que encapsulam alguns conteúdos dentro, utilizando o _styled-components_.
