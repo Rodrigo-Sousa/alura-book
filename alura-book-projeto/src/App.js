@@ -10,9 +10,7 @@ const AppContainer = styled.div`
   /* Cor de fundo */
     background-image: linear-gradient(90deg, #002F52 35%, #326589);
   /* Estilizando todos os li da página */
-    li {
-      list-style: none;
-    }
+
   `
 
 function App() {
