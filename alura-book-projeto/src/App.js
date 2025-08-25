@@ -1,6 +1,9 @@
-import Header from "./components/Header"
+import Header from "./components/Header";
 // Importando o Styled-components
-import styled from "styled-components"
+import styled from "styled-components";
+
+// Importando o componente de Pesquisa
+import Pesquisa from "./components/Pesquisa";
 
 // Utilizando a stilização do styled-components. Pacote que "guarda os estilos"
 const AppContainer = styled.div`
@@ -19,6 +22,8 @@ function App() {
     <AppContainer>
       {/* Utilizando o componente Header */}
       <Header />
+      {/* Sessão de pesquisa */}
+      <Pesquisa />
     </AppContainer>
   );
 }
