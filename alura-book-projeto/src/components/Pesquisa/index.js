@@ -2,6 +2,8 @@
 import Input from "../Input";
 // Importando o styled-components
 import styled from "styled-components";
+// Importando o status, 
+import { useState } from "react";
 
 const PesquisaContainer = styled.section`
     background-image: linear-gradient(90deg, #002F52 35%, #326589 165%);
@@ -27,11 +29,17 @@ const Subtitulo = styled.h3`
 
 // Componente de pesquisa
 function Pesquisa() {
+    // Utilizando o status e a função que "muda os valores/estado";
+    const [textoDigitado, setTextoDigitado] = useState('');
     return (
         <PesquisaContainer>
             <Titulo>Já sabe por onde começar?</Titulo>
             <Subtitulo>Encontre seu livro em nossa estante.</Subtitulo>
-            <Input placeholder="Escreva sua próxima leitura" />
+            <Input placeholder="Escreva sua próxima leitura"
+            // Lidando com o evento que for passado para a função
+            onBlur={evento => setTextoDigitado(evento.target.value)}
+             />
+             <p>{textoDigitado}</p>
         </PesquisaContainer>
     )
 }

@@ -25,3 +25,5 @@ Abrir o terminal na pasta do nosso projeto (alura-books-projeto) e rodar o coman
 8. Criando os containers que encapsulam alguns conteúdos dentro, utilizando o _styled-components_.
 
 9. Estilo global para o projeto (estilização específica).
+
+10. Trabalhando com _stats_ (estado).
