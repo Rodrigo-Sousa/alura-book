@@ -48,19 +48,20 @@ const Resultado = styled.div`
 function Pesquisa() {
     // Utilizando o status e a função que "muda os valores/estado";
     const [livrosPesquisados, setLivrosPesquisados] = useState([]);
+    function fazPesquisa(evento) {
+        // Criando um filtro pegando o texto digitado pelo usuário fazendo uma pesquisa na lista de livros, observando os livros que se encaixam na busca
+        const textoDigitado = evento.target.value;
+        // Essa função é responsável por filtrar os livros digitados na barra de pesquisa.
+        const resultadoPesquisa = livros.filter(livro => livro.nome.includes(textoDigitado));
+        setLivrosPesquisados(resultadoPesquisa);
+    }
     return (
         <PesquisaContainer>
             <Titulo>Já sabe por onde começar?</Titulo>
             <Subtitulo>Encontre seu livro em nossa estante.</Subtitulo>
             <Input placeholder="Escreva sua próxima leitura"
                 // Lidando com o evento que for passado para a função
-                onBlur={evento => {
-                    // Criando um filtro pegando o texto digitado pelo usuário fazendo uma pesquisa na lista de livros, observando os livros que se encaixam na busca
-                    const textDigitado = evento.target.value;
-                    // Essa função é responsável por filtrar os livros digitados na barra de pesquisa.
-                    const resultadoPesquisa = livros.filter(livro => livro.nome.includes(textDigitado));
-                    setLivrosPesquisados(resultadoPesquisa);
-                }
+                onBlur={evento => {fazPesquisa(evento) }
                 }
             />
             {
