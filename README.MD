@@ -27,3 +27,5 @@ Abrir o terminal na pasta do nosso projeto (alura-books-projeto) e rodar o coman
 9. Estilo global para o projeto (estilização específica).
 
 10. Trabalhando com _stats_ (estado).
+
+11. Buscar mais complexas com `onBlur`, criação de uma lista de livros (simulando um banco de Dados).
