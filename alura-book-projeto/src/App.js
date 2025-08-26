@@ -5,6 +5,9 @@ import styled from "styled-components";
 // Importando o componente de Pesquisa
 import Pesquisa from "./components/Pesquisa";
 
+// Importando o últimos lançamentos - componente
+import Ultimoslancamentos from "./components/UltimosLancamentos";
+
 // Utilizando a stilização do styled-components. Pacote que "guarda os estilos"
 const AppContainer = styled.div`
   /* Largura e altura em 100 */
@@ -24,6 +27,8 @@ function App() {
       <Header />
       {/* Sessão de pesquisa */}
       <Pesquisa />
+      {/* Utilizando promps, para verificação de novos lançamentos */}
+      <Ultimoslancamentos />
     </AppContainer>
   );
 }
