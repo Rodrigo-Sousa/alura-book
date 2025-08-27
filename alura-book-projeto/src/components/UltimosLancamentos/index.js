@@ -8,7 +8,7 @@ import { Titulo } from "../Titulo";
 import CardRecomenda from "../CardRecomenda";
 
 // Importando a imagem do livro, para utilização no card
-import imagemLivro from "../../images/livro2.png";
+import imagemLivro from "../../images/angular11.png";
 
 const UltimosLancamentosContainer = styled.section`
     background-color: #EBECEE;
