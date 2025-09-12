@@ -1,9 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import Home from './routers/Home';
 import reportWebVitals from './reportWebVitals';
 // Importando um css globalmente
 import { createGlobalStyle } from 'styled-components';
+// Importando o pacote react-router-dom
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// Importando o header
+import Header from "./components/Header";
+// Importando o componente Favoritos
+import Favoritos from './routers/Favoritos';
 
 const GlobalStyle = createGlobalStyle`
   /* CSS padrão. */
@@ -30,7 +36,24 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <GlobalStyle />
-    <App />
+    {/* Que encapsulará as rotas, permitindo a criação delas */}
+    <BrowserRouter>
+      {/* Utilizando o componente Header */}
+      <Header />
+      {/* Que anuncia a presença de rotas */}
+      <Routes>
+        {/* A rota propriamente dita */}
+        <Route path='/favoritos' element={
+          <p>
+            <Favoritos />
+          </p>
+        } />
+        {/* Rota - home */}
+        <Route path='/' element={
+          <Home />
+        } />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

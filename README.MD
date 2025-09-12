@@ -34,4 +34,10 @@ Abrir o terminal na pasta do nosso projeto (alura-books-projeto) e rodar o coman
 
 ---
 
-13. Criação das _Rotas_, para realizar a conexão do fron-end com o back-end
+13. Criação das _Rotas_, para realizar a conexão do fron-end com o back-end.
+
+14. Instanado o pacote **_React Router_**.
+
+15. Adicionando funções nas opções do menu de navegação da página.
+
+16. Criando a nova página Favoritos e incluindo ela e a página 'home', detro do diretório routers.
