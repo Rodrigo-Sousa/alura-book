@@ -31,3 +31,7 @@ Abrir o terminal na pasta do nosso projeto (alura-books-projeto) e rodar o coman
 11. Buscar mais complexas com `onBlur`, criação de uma lista de livros (simulando um banco de Dados).
 
 12. Usando promps, para criação de novo componente da área de livros novos (lançamentos).
+
+---
+
+13. Criação das _Rotas_, para realizar a conexão do fron-end com o back-end
