@@ -41,3 +41,5 @@ Abrir o terminal na pasta do nosso projeto (alura-books-projeto) e rodar o coman
 15. Adicionando funções nas opções do menu de navegação da página.
 
 16. Criando a nova página Favoritos e incluindo ela e a página 'home', detro do diretório routers.
+
+17. Instalando o Axios, para efetuarmos requisições HTTP no front-end: `npm install axios`.
