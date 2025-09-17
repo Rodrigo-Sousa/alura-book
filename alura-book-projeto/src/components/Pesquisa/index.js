@@ -3,9 +3,12 @@ import Input from "../Input";
 // Importando o styled-components
 import styled from "styled-components";
 // Importando o status, 
-import { useState } from "react";
-// Importando o componente de livros
-import { livros } from "./dadosPesquisa";
+import { useEffect, useState } from "react";
+// Importando o componente de livros - Não utilizado mais esta fonte de dados
+// import { livros } from "./dadosPesquisa";
+
+// Importando a função do Sercies (para pegar os livros)
+import { getLivros } from "../../services/livros"
 
 const PesquisaContainer = styled.section`
     background-image: linear-gradient(90deg, #002F52 35%, #326589 165%);
@@ -46,8 +49,28 @@ const Resultado = styled.div`
 `
 // Componente de pesquisa
 function Pesquisa() {
+    // Mudando a fonte de dados
+
     // Utilizando o status e a função que "muda os valores/estado";
     const [livrosPesquisados, setLivrosPesquisados] = useState([]);
+    // Novo estado para armazenar os livros. Iniciando um arrau vazio
+    const [livros, setLivros] = useState([]);
+
+    // Utilizando useEffect, para já deixar os dados carregados assim que apágina for carregada
+    useEffect(() => {
+        // Invocando a função
+        fetchLivros();
+    }, []);
+
+    // O UsseEffect, não lida tão bem com o async await, vamos criar uma função para tratar isso
+    async function fetchLivros() {
+        // Esse primeiro parâmetro é a função a ser feita, assim que a página carregar. Neste caso, chamaremos a API de livros (que está dentro do services)
+        const livrosDaAPI = await getLivros();
+
+        // Após pegar os livros, vamos efetuar o setLivros
+        setLivros(livrosDaAPI);
+    }
+
     function fazPesquisa(evento) {
         // Criando um filtro pegando o texto digitado pelo usuário fazendo uma pesquisa na lista de livros, observando os livros que se encaixam na busca
         const textoDigitado = evento.target.value;
@@ -61,7 +84,7 @@ function Pesquisa() {
             <Subtitulo>Encontre seu livro em nossa estante.</Subtitulo>
             <Input placeholder="Escreva sua próxima leitura"
                 // Lidando com o evento que for passado para a função
-                onBlur={evento => {fazPesquisa(evento) }
+                onBlur={evento => { fazPesquisa(evento) }
                 }
             />
             {

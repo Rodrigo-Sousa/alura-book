@@ -6,9 +6,9 @@ const livrosAPI = axios.create({baseURL: "http://localhost:8000/livros"});
 
 // Realizando os métodos e funções, para consumir a API do backend 
 
-function getLivros(){
-    // Utilizando o axios.create temos algumas instâncias de retorno, dentro delas, o GET
-    const response = livrosAPI.get('/');
+async function getLivros(){
+    // Utilizando o axios.create temos algumas instâncias de retorno, dentro delas, o GET. Informando que a função possui códigos assincronos, que precisa esperarpara carregar eles
+    const response = await livrosAPI.get('/');
 
     // Retorno do axios em data, como temos o retorno na variável response, iremos passar ela, com os dados
     return response.data;
