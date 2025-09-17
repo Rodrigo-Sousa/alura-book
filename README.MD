@@ -2,6 +2,8 @@
 
 É um projeto do curso **_React: comece seu projeto full stack_**, onde será desenvolvido uma página para leitores de livros, contendo os conhecimentos do curso da Alura.
 
+A segunda parte do projeto, é o cosumo da [API que foi desenvolvido na parte de back-end](https://github.com/Rodrigo-Sousa/alura-book-server), vinculando ambas as partes neste projeto. Sendo parte do curso **React e Node.js: Consumindo APIs no React no projeto full stack**
+
 ## Etapas do projeto:
 
 1. Criar estrutura base do projeto.
