@@ -36,7 +36,7 @@ function Ultimoslancamentos() {
             <Titulo cor={"#EB9B00"}
                 tamanhoFonte={"36px"}
             
-            >Últimos Lançamentos.</Titulo>
+            >ÚLTIMOS LANÇAMENTOS</Titulo>
             <NovosLivrosContainer>
                 {
                     livros.map(livro => (

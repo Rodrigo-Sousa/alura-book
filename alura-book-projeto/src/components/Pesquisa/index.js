@@ -15,7 +15,7 @@ const PesquisaContainer = styled.section`
     color: #FFF;
     text-align: center;
     padding: 85px 0;
-    height: 270px;
+    height: 470px;
     width: 100%;
 `
 
@@ -64,6 +64,7 @@ function Pesquisa() {
 
     // O UsseEffect, não lida tão bem com o async await, vamos criar uma função para tratar isso
     async function fetchLivros() {
+        
         // Esse primeiro parâmetro é a função a ser feita, assim que a página carregar. Neste caso, chamaremos a API de livros (que está dentro do services)
         const livrosDaAPI = await getLivros();
 
