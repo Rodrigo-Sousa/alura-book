@@ -13,8 +13,19 @@ async function getFavoritos(){
     // Retorno do axios em data, como temos o retorno na variável response, iremos passar ela, com os dados
     return response.data;
 }
-
+// Função para adicionar o livro quando clicar na parte de favoritos
+async function postFavorito(id){
+    // Inserindo o livro
+    await favoritosAPI.post(`/${id}`);
+}
+// Função para adicionar o livro quando clicar na parte de favoritos
+async function deleteFavorito(id){
+    // Inserindo o livro
+    await favoritosAPI.delete(`/${id}`);
+}
 // Exportando as funções
 export {
-    getFavoritos
+    getFavoritos,
+    postFavorito,
+    deleteFavorito,
 }
