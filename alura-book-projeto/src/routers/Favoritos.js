@@ -1,9 +1,11 @@
 // Importando o Styled-components
 import styled from "styled-components";
-
-// Importando o componente de Pesquisa
-import Pesquisa from "../components/Pesquisa";
-
+// Utilizando o useState e useEffect
+import { useEffect, useState } from "react";
+// Importanto a função do serviço
+import { getFavoritos } from "../services/favoritos";
+// Importando a imagem dos livros
+import livroImg from "../images/AlgoritmosEmJavaScript.png"
 // Utilizando a stilização do styled-components. Pacote que "guarda os estilos"
 const AppContainer = styled.div`
   /* Largura e altura em 100 */
@@ -11,16 +13,78 @@ const AppContainer = styled.div`
     height: 100vh;
   /* Cor de fundo */
     background-image: linear-gradient(90deg, #002F52 35%, #326589);
-  /* Estilizando todos os li da página */
-
   `
+const ResultadoContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+`
+
+const Resultado = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    cursor: pointer;
+    text-align: center;
+    padding: 0 100px;
+    p {
+        width: 200px;
+        color: #FFF;
+    }
+    img {
+        width: 100px;
+    }
+    &:hover {
+        border: 1px solid white;
+    }
+`
+
+const Titulo = styled.h2`
+    color: #FFF;
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+    padding-top: 35px
+`
 
 function Favoritos() {
+  // Trabalhando com useState(), para salvar os livros favoritos
+  const [favoritos, setFavoritos] = useState([]);
+
+  // UseEffect consome api's de forma assíncronas, para isso, precisamos utilizar uma outra função, com o async await.
+  async function fetchFavoritos() {
+
+    const favoritosDaApi = await getFavoritos();
+    // Passando o conteúdo que recebe da API
+    setFavoritos(favoritosDaApi);
+
+  }
+
+  // Após criar o estado de favoritos (useState), vamos inserir valores nele, com o useEffect
+  useEffect(() => {
+    // Função que utilizamos para setar o estado dos livros favoritos
+    fetchFavoritos();
+  }, [])
   return (
     // Utilizando o componente estilizado
     <AppContainer>
-      {/* Sessão de pesquisa */}
-      <Pesquisa />
+      <div>
+        <Titulo>Aqui estão seus livros favoritos: </Titulo>
+        <ResultadoContainer>
+          {/* Inserindo dados JavaScript */}
+          {
+            // Exibindo na tela, o conteúdo com o método map(), para criar um novo array.
+            favoritos.length !== 0 ? favoritos.map(favorito => (
+              <Resultado>
+              {/* Recebendo o conteúdo do favorito, exibindo o nome do livro */}
+                <p>{favorito.nome}</p>
+                <img src={livroImg}/>
+              </Resultado>
+            )) : null
+          }
+        </ResultadoContainer>
+      </div>
     </AppContainer>
   );
 }

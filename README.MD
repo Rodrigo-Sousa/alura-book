@@ -51,3 +51,5 @@ Abrir o terminal na pasta do nosso projeto (alura-books-projeto) e rodar o coman
 19. Após incluir os dados da API no arquivo de Pesquisa, iremos precisar utilizar a função _async_ e _await_, para podermos carregar os dados no front-end, vindos do back-end, respeitando a execução da página (aplicação). 
 
 20. Instalando o CORS no Back-end.
+
+21. Serviço GET no consumo da API para a página **Favoritos**.
