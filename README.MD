@@ -53,3 +53,7 @@ Abrir o terminal na pasta do nosso projeto (alura-books-projeto) e rodar o coman
 20. Instalando o CORS no Back-end.
 
 21. Serviço GET no consumo da API para a página **Favoritos**.
+
+22. Adicionado as função para adicionar o livro ao ser pesquisado na _Home_ e clicado sobre ele. 
+
+22. Na página de _Favoritos.js_, ao clicar sobre um livro da lista, é deletado e recarregado a página.
