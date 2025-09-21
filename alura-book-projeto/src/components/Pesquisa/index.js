@@ -8,7 +8,9 @@ import { useEffect, useState } from "react";
 // import { livros } from "./dadosPesquisa";
 
 // Importando a função do Sercies (para pegar os livros)
-import { getLivros } from "../../services/livros"
+import { getLivros } from "../../services/livros";
+// Importando a função para inserir o livro no arquivo Favoritos
+import { postFavorito } from "../../services/favoritos";
 
 const PesquisaContainer = styled.section`
     background-image: linear-gradient(90deg, #002F52 35%, #326589 165%);
@@ -64,12 +66,19 @@ function Pesquisa() {
 
     // O UsseEffect, não lida tão bem com o async await, vamos criar uma função para tratar isso
     async function fetchLivros() {
-        
+
         // Esse primeiro parâmetro é a função a ser feita, assim que a página carregar. Neste caso, chamaremos a API de livros (que está dentro do services)
         const livrosDaAPI = await getLivros();
 
         // Após pegar os livros, vamos efetuar o setLivros
         setLivros(livrosDaAPI);
+    }
+
+    // Função para inserir o livro e exibir na página Favoritos
+    async function insertFavorito(id){
+        await postFavorito(id);
+        alert(`Livro de id: ${id} inserido!`);
+
     }
 
     function fazPesquisa(evento) {
@@ -93,7 +102,8 @@ function Pesquisa() {
                 livrosPesquisados.map(
                     // Como parâmetros temos uma arrow function
                     livro => (
-                        <Resultado>
+                        // Adicionando a função que ao clicar, será 'chamado' a nossa função para inserir o livro na página Favoritos.
+                        <Resultado onClick={() => insertFavorito(livro.id) }>
                             <img src={livro.src} />
                             <p>{livro.nome}</p>
                         </Resultado>

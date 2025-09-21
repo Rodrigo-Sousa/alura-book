@@ -3,7 +3,7 @@ import styled from "styled-components";
 // Utilizando o useState e useEffect
 import { useEffect, useState } from "react";
 // Importanto a função do serviço
-import { getFavoritos } from "../services/favoritos";
+import { deleteFavorito, getFavoritos } from "../services/favoritos";
 // Importando a imagem dos livros
 import livroImg from "../images/AlgoritmosEmJavaScript.png"
 // Utilizando a stilização do styled-components. Pacote que "guarda os estilos"
@@ -61,6 +61,15 @@ function Favoritos() {
 
   }
 
+  // Função para deletar o livro da página favoritos (em consequência do arquivos JSON no backend.)
+  async function deletarFavorito(id){
+    // Após receber o id, irá chamar a função do serviço, para deletar o objeto
+    await deleteFavorito(id);
+    // Após deletar, irá recarregar a página, para exibir a lista 'atual' dos livros favoritos.
+    await fetchFavoritos();
+    // Mensagem que a exclusão foi feita com sucesso. 
+    alert(`Livro de id: ${id} foi deletado com sucesso!`);
+  }
   // Após criar o estado de favoritos (useState), vamos inserir valores nele, com o useEffect
   useEffect(() => {
     // Função que utilizamos para setar o estado dos livros favoritos
@@ -76,7 +85,7 @@ function Favoritos() {
           {
             // Exibindo na tela, o conteúdo com o método map(), para criar um novo array.
             favoritos.length !== 0 ? favoritos.map(favorito => (
-              <Resultado>
+              <Resultado onClick={() => deletarFavorito(favorito.id)}>
               {/* Recebendo o conteúdo do favorito, exibindo o nome do livro */}
                 <p>{favorito.nome}</p>
                 <img src={livroImg}/>
